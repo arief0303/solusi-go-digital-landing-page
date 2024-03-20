@@ -20,6 +20,9 @@ const config: Config = {
         'xl': '1280px',
         '2xl': '1536px',
       },
+      spacing: {
+        '57': '57rem',
+      },
     },
   },
   plugins: [require("daisyui")],
