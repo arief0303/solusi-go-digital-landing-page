@@ -1,7 +1,7 @@
 export default function HeroIllustration() {
   return (
     <svg
-      className="min-w-[512px] min-h-[512px]"
+      className="min-h-60 min-w-60 max-h-96 max-w-96"
       id="70093593-85a2-447b-b81e-208691c845a3"
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"

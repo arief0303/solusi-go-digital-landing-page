@@ -22,6 +22,20 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+  daisyui: {
+    styled: true,
+    themes: [
+      "light",
+      "dark",
+      "cupcake",
+      "bumblebee",
+      "emerald",
+      "corporate",],
+    base: true,
+    utils: true,
+    logs: true,
+    rtl: false,
+  },
 };
 export default config;
