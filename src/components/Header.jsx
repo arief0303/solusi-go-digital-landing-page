@@ -1,8 +1,23 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 const Header = () => {
+    const [lastScrollTop, setLastScrollTop] = useState(0);
+    const [headerVisible, setHeaderVisible] = useState(true);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const st = window.pageYOffset || document.documentElement.scrollTop;
+            setHeaderVisible(st <= lastScrollTop || st <= 0);
+            setLastScrollTop(st <= 0 ? 0 : st);
+        };
+
+        window.addEventListener("scroll", handleScroll, { passive: true });
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [lastScrollTop]);
+
     return (
-        <div className="fixed navbar bg-transparent">
+        <div className={`fixed navbar bg-transparent sm:bg-gradient-to-b from-black/50 to-transparent transition-transform duration-500 ease-in-out transform ${headerVisible ? 'translate-y-0' : '-translate-y-full'}`}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -22,10 +37,13 @@ const Header = () => {
                 </div>
                 {/* <a className="btn btn-ghost text-xl">daisyUI</a> */}
             </div>
-            <div className="navbar-center hidden lg:flex">
+            <div className="navbar-center hidden lg:flex bg-grad">
                 <ul className="menu menu-horizontal px-1">
-                    <li><a>Item 1</a></li>
-                    <li>
+                    <li><a>Home</a></li>
+                    <li><a>Benefit</a></li>
+                    <li><a>Pricing</a></li>
+                    <li><a>Contact</a></li>
+                    {/* <li>
                         <details>
                             <summary>Parent</summary>
                             <ul className="p-2">
@@ -33,8 +51,8 @@ const Header = () => {
                                 <li><a>Submenu 2</a></li>
                             </ul>
                         </details>
-                    </li>
-                    <li><a>Item 3</a></li>
+                    </li> */}
+                    {/* <li><a>Item 3</a></li> */}
                 </ul>
             </div>
             <div className="navbar-end">
