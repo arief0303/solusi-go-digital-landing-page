@@ -8,33 +8,31 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        'grey': '#f4f4fc',
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-to-b": "linear-gradient(to bottom, var(--tw-gradient-stops))",
       },
       screens: {
-        'sm': '640px',
-        'md': '768px',
-        'lg': '1024px',
-        'xl': '1280px',
-        '2xl': '1536px',
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
       },
       spacing: {
-        '57': '57rem',
+        "57": "57rem",
       },
     },
   },
   plugins: [require("daisyui")],
   daisyui: {
     styled: true,
-    themes: [
-      "light",
-      "dark",
-      "cupcake",
-      "bumblebee",
-      "emerald",
-      "corporate",],
+    themes: true,
     base: true,
     utils: true,
     logs: true,
