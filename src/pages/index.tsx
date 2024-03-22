@@ -7,8 +7,8 @@ const index = () => {
     <>
       <Header />
       <section className="First">
-        <div className="flex flex-col pt-6 sm:pt-20 sm:flex-row bg-gradient-to-b from-base-100 via-base-100 to-grey h-[80vh] ">
-          <div className="SolusiGoDigital px-14 pt-0 sm:pt-20">
+        <div className="flex flex-col pt-6 sm:pt-20 sm:flex-row bg-gradient-to-b from-base-100 via-base-100 to-grey h-3/4 items-center sm:items-end ">
+          <div className="SolusiGoDigital px-14 py-0 sm:py-20 md:py-40">
             <img className="h-8" src="/svg/tki.svg" alt="TKI logo" />
             <div className="my-4 w-full h-auto text-white font-bold leading-normal text-6xl">
               Solusi GO Digital.
@@ -25,8 +25,8 @@ const index = () => {
         </div>
       </section>
       <section className="Second">
-        <div className="h-[225vh] bg-grey">
-          <div className="flex items-center justify-center h-auto w-full font-bold text-6xl text-black pt-60 px-10">
+        <div className="h-[150vh] sm:h-screen bg-grey">
+          <div className="flex items-center justify-center h-auto w-full font-bold text-6xl text-black px-10 pt-80 pb-0">
             Solusi inovatif lebih mudah.
           </div>
           <Carousel />
