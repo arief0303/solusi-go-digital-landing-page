@@ -20,7 +20,7 @@ const Carousel = () => {
       },
       {
         url: '/images/kartu.webp',
-        description: 'Card Transsaction',
+        description: 'Card Transaction',
         details: 'Make payments seamlessly.',
       },
       /* {
