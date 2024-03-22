@@ -7,7 +7,7 @@ const index = () => {
     <>
       <Header />
       <section className="First">
-        <div className="flex flex-col pt-6 sm:pt-20 sm:flex-row bg-gradient-to-b from-base-100 via-base-100 to-grey h-3/4 items-center sm:items-end ">
+        <div className="flex flex-col pt-6 sm:pt-10 sm:flex-row bg-gradient-to-b from-base-100 via-base-100 to-grey h-3/4 items-center sm:items-end ">
           <div className="SolusiGoDigital px-14 py-0 sm:py-20 md:py-40">
             <img className="h-8" src="/svg/tki.svg" alt="TKI logo" />
             <div className="my-4 w-full h-auto text-white font-bold leading-normal text-6xl">
