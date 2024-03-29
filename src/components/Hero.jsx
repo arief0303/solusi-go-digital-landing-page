@@ -21,6 +21,10 @@ const Hero = () => {
               Ayoo! Bergabung bersama ratusan ribu pelanggan kita yang telah
               menggunakan produk kami.
             </div>
+            <div className="flex">
+            <button className="btn btn-active btn-neutral mt-4 mr-4"><a href="https://psp.teknologikartu.com/home/eyJhbGciOiJIUzI1NiJ9.eyJwcm9kdWNlciI6InNzbyIsInVzZXJJZCI6IjY1YmI0MDgzMWI5ZWE0NTZjODk5MDFjNCIsImNvbXBhbnlJZCI6IjYyMjZjYjRjM2ExOGQ5OTk4NTdlNGYwZSIsInBlcm1pc3Npb24iOiIiLCJleHAiOjE3MTE3MDk1ODcsImlhdCI6MTcxMTcwNTk4N30.AhfZDbPEelwDZqZ9iokgzOszl4iXvhf5b-THe2xh7Tc/en">Demo</a></button>
+            <button className="btn btn-active btn-neutral mt-4"><a href="https://www.youtube.com/watch?v=XM5E0cjedik&t=11s&ab_channel=TeknologiKartuIndonesia">Watch Video</a></button>
+            </div>
           </div>
           <img
             className="max-w-full sm:max-w-[50vw] rounded-t-lg mx-10 mt-5 h-fit"

@@ -1,23 +1,26 @@
 import React from "react";
 import { Typography } from "@material-tailwind/react";
- 
+
 const LINKS = [
   {
     title: "Contact",
     items: ["0815-4255-3779"],
+    url: "https://teknologikartu.com/",
   },
   {
     title: "Lokasi",
     items: ["Jl. Nakula Sadewa Raya No.17B, Dukuh,Kec. Sidomukti, Kota Salatiga, Jawa Tengah 50722"],
+    url: "https://maps.app.goo.gl/zzHenrwsZ9VGEWDn8",
   },
   {
     title: "Follow Us",
     items: ["Facebook", "Linkedin", "Instagram", "Youtube"],
+    url: ["https://teknologikartu.com/", "https://www.linkedin.com/company/teknologikartuindonesia/mycompany/", "https://teknologikartu.com/", "https://www.youtube.com/@teknologikartuindonesia3553"],
   },
 ];
- 
+
 const currentYear = new Date().getFullYear();
- 
+
 export function Footer() {
   return (
     <footer className="relative h-full w-auto mt-28">
@@ -25,7 +28,7 @@ export function Footer() {
         <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
           <img className="h-8 mb-6" src="/svg/tki.svg" alt="TKI logo" />
           <div className="grid grid-cols-3 justify-between gap-4">
-            {LINKS.map(({ title, items }) => (
+            {LINKS.map(({ title, items, url }) => (
               <ul key={title}>
                 <Typography
                   variant="small"
@@ -34,16 +37,11 @@ export function Footer() {
                 >
                   {title}
                 </Typography>
-                {items.map((link) => (
-                  <li key={link}>
-                    <Typography
-                      as="a"
-                      href="#"
-                      color="white"
-                      className="py-1.5 font-normal transition-colors hover:clipRule-blue-gray-900"
-                    >
-                      {link}
-                    </Typography>
+                {items.map((item, index) => (
+                  <li key={item}>
+                    <a href={Array.isArray(url) ? url[index] : url} target="_blank" rel="noopener noreferrer">
+                      {item}
+                    </a>
                   </li>
                 ))}
               </ul>
