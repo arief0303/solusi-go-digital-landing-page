@@ -99,7 +99,7 @@ const Pricing = () => {
                           {plan.listItems.slice(3).map((item, index) => (
                             <div className="flex items-center">
                               <img className="h-8 inline-block" src="/svg/Platform Sekolah Pintar-1.svg" alt="checklist" />
-                              <li key={index + 3}>{item}</li>
+                              <li className="text-white" key={index + 3}>{item}</li>
                             </div>
                           ))}
                         </animated.div>
