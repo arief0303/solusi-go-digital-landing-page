@@ -71,27 +71,27 @@ const Pricing = () => {
             {plans.map((plan, index) => (
               <div key={index} className="card bg-base-100 shadow-xl w-auto m-4" data-aos="fade-right" data-aos-delay={`${index * 100}`}>
                 <article className="prose prose-xs">
-                  <h1 className="text-center p-4 text-4xl">{plan.title}</h1>
+                  <h1 className="text-center p-4 text-4xl text-white">{plan.title}</h1>
                   <hr className="border border-t border-gray-200 w-full" />
                 </article>
                 <img className="h-96 w-96" src={plan.svg} alt={plan.title} />
                 <div className="card-body items-center text-center">
-                  <h2 className="">{plan.registrationPrice1}</h2>
-                  <h2 className="">{plan.registrationQuantity1}</h2>
-                  <h2 className="">{plan.registrationPrice2}</h2>
-                  <h2 className="">{plan.registrationQuantity2}</h2>
-                  <h2 className="">{plan.registrationPrice3}</h2>
-                  <h2 className="">{plan.registrationQuantity3}</h2>
+                  <h2 className="text-white">{plan.registrationPrice1}</h2>
+                  <h2 className="text-white">{plan.registrationQuantity1}</h2>
+                  <h2 className="text-white">{plan.registrationPrice2}</h2>
+                  <h2 className="text-white">{plan.registrationQuantity2}</h2>
+                  <h2 className="text-white">{plan.registrationPrice3}</h2>
+                  <h2 className="text-white">{plan.registrationQuantity3}</h2>
                   <hr className="border border-t border-gray-200 w-full" />
                   <div className="card-actions">
-                    <p>Platform yang didapat</p>
+                    <p className="text-white">Platform yang didapat</p>
                   </div>
                   <div>
                     <ul>
                       {plan.listItems.slice(0, 3).map((item, index) => (
                         <div className="flex items-center">
                           <img className="h-8 inline-block" src="/svg/Platform Sekolah Pintar-1.svg" alt="checklist" />
-                          <li key={index}>{item}</li>
+                          <li className="text-white" key={index}>{item}</li>
                         </div>
                       ))}
                       {!collapsedStates[index] && (
