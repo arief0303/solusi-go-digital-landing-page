@@ -12,7 +12,7 @@ const Partners = () => {
     const partners = [
         { p1: '1200++', p2: 'Institution', color: 'bg-blue-500 text-white' },
         { p1: '300.000++', p2: 'User', color: 'bg-red-500 text-white' },
-        { p1: '500.000++', p2: 'Transansaction', color: 'bg-green-500 text-white' },
+        { p1: '500.000++', p2: 'Transnsaction', color: 'bg-green-500 text-white' },
         // Add more partners here
     ];
 
