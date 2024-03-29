@@ -106,7 +106,7 @@ const Pricing = () => {
                       )}
                     </ul>
                     {plan.listItems.length > 2 && (
-                      <button onClick={() => toggleCollapse(index)}>
+                      <button className="text-white" onClick={() => toggleCollapse(index)}>
                         {collapsedStates[index] ? 'Show More' : 'Show Less'}
                       </button>
                     )}
