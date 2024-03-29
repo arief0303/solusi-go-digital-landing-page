@@ -1,9 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import Header from "./Header";
 import { useSpring, animated } from 'react-spring';
-import Carousel from "./Carousel";
-import Link from "next/link";
-import { Footer } from "./Footer";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 

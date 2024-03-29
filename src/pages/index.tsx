@@ -6,10 +6,7 @@ import Benefits from "../components/Benefits";
 import Pricing from "../components/Pricing";
 import Partners from "../components/Partners";
 import MobileApp from "../components/MobileApp";
-import { useSpring, animated } from 'react-spring';
 import Carousel from "../components/Carousel";
-import Link from "next/link";
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const index = () => {
