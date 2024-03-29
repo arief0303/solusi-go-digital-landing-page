@@ -29,7 +29,7 @@ const Benefits = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {benefits.map((benefit, index) => (
                   <div className="flex items-center" data-aos="fade-in" data-aos-delay={`${index * 100}`}>
-                    <img className="h-8" src="/svg/Platform Sekolah Pintar-1.svg" alt="checklist" />
+                    <img className="h-8" src="/svg/Platform Sekolah Pintar-2.svg" alt="checklist" />
                     <li key={index}>{benefit}</li>
                   </div>
                 ))}
