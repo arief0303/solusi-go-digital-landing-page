@@ -121,7 +121,7 @@ const Pricing = () => {
             <h1 className="text-black h-auto w-full font-bold text-4xl text-center pb-8" data-aos="zoom-in">Informasi produk dan harga lebih detail</h1>
           </div>
           <div>
-            <button className="btn btn-primary">Hubungi Kami</button>
+            <button className="btn btn-primary"><a href="https://api.whatsapp.com/send/?phone=6281542553779&text&type=phone_number&app_absent=0">Hubungi Kami</a></button>
           </div>
         </div>
       </div>
