@@ -47,12 +47,36 @@ const Header = () => {
                             </ul>
                         </li>
                         <li><a>Item 3</a></li> */}
-                        <li><a>Home</a></li>
-                        <li><a>Solution</a></li>
-                        <li><a>Benefits</a></li>
-                        <li><a>Partners</a></li>
-                        <li><a>Pricing</a></li>
-                        <li><a>Contact</a></li>
+                        <li><a onClick={(event) => {
+                            event.preventDefault();
+                            const element = document.querySelector('#First');
+                            if (element) element.scrollIntoView({ behavior: 'smooth' });
+                        }}>Home</a></li>
+                        <li><a onClick={(event) => {
+                            event.preventDefault();
+                            const element = document.querySelector('#Second');
+                            if (element) element.scrollIntoView({ behavior: 'smooth' });
+                        }}>Solution</a></li>
+                        <li><a onClick={(event) => {
+                            event.preventDefault();
+                            const element = document.querySelector('#Third');
+                            if (element) element.scrollIntoView({ behavior: 'smooth' });
+                        }}>Benefits</a></li>
+                        <li><a onClick={(event) => {
+                            event.preventDefault();
+                            const element = document.querySelector('#Fourth');
+                            if (element) element.scrollIntoView({ behavior: 'smooth' });
+                        }}>Partners</a></li>
+                        <li><a onClick={(event) => {
+                            event.preventDefault();
+                            const element = document.querySelector('#Fifth');
+                            if (element) element.scrollIntoView({ behavior: 'smooth' });
+                        }}>Pricing</a></li>
+                        <li><a onClick={(event) => {
+                            event.preventDefault();
+                            const element = document.querySelector('#Sixth');
+                            if (element) element.scrollIntoView({ behavior: 'smooth' });
+                        }}>Contact</a></li>
                     </ul>
                 </div>
                 {/* <a className="btn btn-ghost text-xl">daisyUI</a> */}

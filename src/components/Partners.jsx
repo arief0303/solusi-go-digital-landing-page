@@ -6,7 +6,6 @@ const Partners = () => {
     useEffect(() => {
         AOS.init({
             duration: 2000, // Duration of the animation
-            once: true, // Whether animation should happen only once - while scrolling down
         });
     }, []);
 
