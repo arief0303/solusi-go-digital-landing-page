@@ -17,7 +17,7 @@ const Header = () => {
     }, [lastScrollTop]);
 
     return (
-        <div className={`fixed navbar bg-transparent sm:bg-gradient-to-b from-black/50 to-transparent transition-transform duration-500 ease-in-out transform ${headerVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+        <div className={`fixed w-screen navbar bg-transparent lg:bg-gradient-to-b from-black/50 to-transparent transition-transform duration-500 ease-in-out transform ${headerVisible ? 'translate-y-0' : '-translate-y-full'} z-50`}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -37,7 +37,7 @@ const Header = () => {
                             </defs>
                             <path filter="url(#shadow)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </div>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-black rounded-box w-52">
                         {/* <li><a>Item 1</a></li>
                         <li>
                             <a>Parent</a>
@@ -48,7 +48,9 @@ const Header = () => {
                         </li>
                         <li><a>Item 3</a></li> */}
                         <li><a>Home</a></li>
-                        <li><a>Benefit</a></li>
+                        <li><a>Solution</a></li>
+                        <li><a>Benefits</a></li>
+                        <li><a>Partners</a></li>
                         <li><a>Pricing</a></li>
                         <li><a>Contact</a></li>
                     </ul>
@@ -57,10 +59,36 @@ const Header = () => {
             </div>
             <div className="navbar-center hidden lg:flex bg-grad">
                 <ul className="menu menu-horizontal px-1">
-                    <li><a>Home</a></li>
-                    <li><a>Benefit</a></li>
-                    <li><a>Pricing</a></li>
-                    <li><a>Contact</a></li>
+                    <li><a onClick={(event) => {
+                        event.preventDefault();
+                        const element = document.querySelector('#First');
+                        if (element) element.scrollIntoView({ behavior: 'smooth' });
+                    }}>Home</a></li>
+                    <li><a onClick={(event) => {
+                        event.preventDefault();
+                        const element = document.querySelector('#Second');
+                        if (element) element.scrollIntoView({ behavior: 'smooth' });
+                    }}>Solution</a></li>
+                    <li><a onClick={(event) => {
+                        event.preventDefault();
+                        const element = document.querySelector('#Third');
+                        if (element) element.scrollIntoView({ behavior: 'smooth' });
+                    }}>Benefits</a></li>
+                    <li><a onClick={(event) => {
+                        event.preventDefault();
+                        const element = document.querySelector('#Fourth');
+                        if (element) element.scrollIntoView({ behavior: 'smooth' });
+                    }}>Partners</a></li>
+                    <li><a onClick={(event) => {
+                        event.preventDefault();
+                        const element = document.querySelector('#Fifth');
+                        if (element) element.scrollIntoView({ behavior: 'smooth' });
+                    }}>Pricing</a></li>
+                    <li><a onClick={(event) => {
+                        event.preventDefault();
+                        const element = document.querySelector('#Sixth');
+                        if (element) element.scrollIntoView({ behavior: 'smooth' });
+                    }}>Contact</a></li>
                     {/* <li>
                         <details>
                             <summary>Parent</summary>
