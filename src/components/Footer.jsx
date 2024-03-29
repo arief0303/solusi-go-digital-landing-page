@@ -5,7 +5,7 @@ const LINKS = [
   {
     title: "Contact",
     items: ["0815-4255-3779"],
-    url: "https://teknologikartu.com/",
+    url: "https://api.whatsapp.com/send/?phone=6281542553779&text&type=phone_number&app_absent=0",
   },
   {
     title: "Lokasi",

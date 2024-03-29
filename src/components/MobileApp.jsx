@@ -17,8 +17,8 @@ const MobileApp = () => {
             <span key={index} data-aos="fade-up" data-aos-delay={`${index * 100}`}>{word} </span>
           ))}</h1>
           <p className="pb-5 text-white">Bersiaplah untuk transisi yang mulus menuju masa depan pendidikan yang lebih canggih, lebih cerdas, dan lebih terkoneksi!</p>
-          <button className="btn mr-5 btn-primary">Hubungi Kami</button>
-          <button className="btn">Materi PPT</button>
+          <button className="btn mr-5 btn-primary"><a href="https://api.whatsapp.com/send/?phone=6281542553779&text&type=phone_number&app_absent=0">Hubungi Kami</a></button>
+          <button className="btn"><a href="https://www.canva.com/design/DAF6Gx0mMfo/aUoIsjAgYjtdgSkcouWoJw/view?success=true&continue_in_browser=true">Materi PPT</a></button>
         </div>
         <img
           className="max-w-screen sm:max-w-[50vw] rounded-lg py-5 h-fit"
