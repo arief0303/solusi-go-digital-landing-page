@@ -21,9 +21,9 @@ const Partners = () => {
             <div className="flex items-center justify-center h-auto w-full font-bold text-6xl text-black px-10 pt-80 pb-8 bg-grey py-96" data-aos="fade-up">
                 Partners
             </div>
-            <div className="flex flex-col md:flex-row justify-center flex-wrap">
+            <div className="flex flex-col md:flex-row justify-center items-center w-screen h-full">
                 {partners.map((partner, index) => (
-                    <div key={index} className={`card w-96 md:w-64 ${partner.color} m-4`} data-aos="fade-right" data-aos-delay={`${index * 100}`}>
+                    <div key={index} className={`card w-64 ${partner.color} m-4`} data-aos="fade-right" data-aos-delay={`${index * 100}`}>
                         <div className="card-body">
                             <h2 className="text-center text-4xl text-bold">{partner.p1}</h2>
                             <p className="text-center text-2xl">{partner.p2}</p>
