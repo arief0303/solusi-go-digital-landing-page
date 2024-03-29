@@ -56,7 +56,7 @@ export function Footer() {
             &copy; {currentYear} <a href="https://teknologikartu.com/">Teknologi Kartu Indonesia</a>. All
             Rights Reserved.
           </Typography>
-          <div className="flex gap-4 text-white sm:justify-center">
+          {/* <div className="flex gap-4 text-white sm:justify-center">
             <Typography as="a" href="https://teknologikartu.com/" className="opacity-80 transition-opacity hover:opacity-100">
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
@@ -98,7 +98,7 @@ export function Footer() {
                 />
               </svg>
             </Typography>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
