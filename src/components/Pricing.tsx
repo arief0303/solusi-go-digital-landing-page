@@ -34,7 +34,7 @@ const Pricing = () => {
         registrationQuantity2: "Per Physical Card",
         registrationPrice3: "Rp 1.000.000",
         registrationQuantity3: "Per Month",
-        listItems: ['Transaksi Cashless', 'Manajemen Kantin', 'Transfer Bank', 'Tagihan digital', 'Marketplace', 'Learning Managment System', 'PPOB', 'Absensi', 'Parkir', 'Donasi', 'POS', 'PPDB'],
+        listItems: ['Transaksi Cashless', 'Manajemen Kantin', 'Transfer Bank', 'Tagihan digital', 'Marketplace', 'LMS', 'PPOB', 'Absensi', 'Parkir', 'Donasi', 'POS', 'PPDB'],
       },
       {
         title: "Hardware",
