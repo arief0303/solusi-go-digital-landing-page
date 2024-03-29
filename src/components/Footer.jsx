@@ -26,7 +26,9 @@ export function Footer() {
     <footer className="relative h-full w-auto mt-28">
       <div className="mx-auto w-full max-w-7xl px-8">
         <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
-          <img className="h-8 mb-6" src="/svg/tki.svg" alt="TKI logo" />
+          <a href="https://teknologikartu.com/">
+            <img className="h-8 mb-6" src="/svg/tki.svg" alt="TKI logo" />
+          </a>
           <div className="grid grid-cols-3 justify-between gap-4">
             {LINKS.map(({ title, items, url }) => (
               <ul key={title}>
@@ -101,6 +103,6 @@ export function Footer() {
           </div> */}
         </div>
       </div>
-    </footer>
+    </footer >
   );
 }
