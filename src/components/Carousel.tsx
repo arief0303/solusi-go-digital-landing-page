@@ -90,7 +90,7 @@ const Carousel = () => {
   }, [currentIndex, shouldContinue]);
 
   return (
-    <div className="h-[150vh] sm:h-screen bg-grey">
+    <div className="h-screen bg-grey">
       <div className="flex items-center justify-center h-auto w-full font-bold text-6xl text-black px-10 pb-0" data-aos="fade-up">
         Solusi inovatif lebih mudah.
       </div>

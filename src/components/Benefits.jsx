@@ -20,7 +20,7 @@ const Benefits = () => {
   
     return (
       <>
-        <div className="flex items-center justify-center h-auto w-full px-10 pt-80 pb-8 bg-grey py-96">
+        <div className="flex items-center justify-center h-auto w-full px-10 pt-80 pb-8 bg-grey py-32">
           <p className="font-bold text-6xl text-black" data-aos="fade-in">Benefits</p>
         </div>
         <div className="h-1/2 bg-grey">
