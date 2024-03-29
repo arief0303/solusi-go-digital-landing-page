@@ -14,8 +14,8 @@ const LINKS = [
   },
   {
     title: "Follow Us",
-    items: ["Facebook", "Linkedin", "Instagram", "Youtube"],
-    url: ["https://teknologikartu.com/", "https://www.linkedin.com/company/teknologikartuindonesia/mycompany/", "https://teknologikartu.com/", "https://www.youtube.com/@teknologikartuindonesia3553"],
+    items: [ "Linkedin", "Youtube"],
+    url: ["https://www.linkedin.com/company/teknologikartuindonesia/mycompany/", "https://www.youtube.com/@teknologikartuindonesia3553"],
   },
 ];
 
