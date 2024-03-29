@@ -64,7 +64,7 @@ const Pricing = () => {
   
     return (
       <div className="bg-grey">
-        <div className="flex items-center justify-center h-auto w-full font-bold text-6xl text-black px-10 pt-80 pb-8 py-96" data-aos="fade-up" R>
+        <div className="flex items-center justify-center h-auto w-full font-bold text-6xl text-black px-10 pt-80 pb-8 py-96" data-aos="fade-up">
           Choose a plan that works for you.
         </div>
         <div className="flex justify-center items-start min-h-screen">
