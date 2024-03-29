@@ -8,8 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation: {
+        fadeInUp: 'fadeInUp 1s ease-out'
+      },
       colors: {
         'grey': '#f4f4fc',
+        'secondary': '#3664E9',
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
