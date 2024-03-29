@@ -1,87 +1,100 @@
-import React,{useEffect,useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Carousel = () => {
-    const slides = [
-      {
-        url: '/images/bimbi-ai.webp',
-        description: 'Bimbi AI',
-        details: 'AI Chatbot for Education.',
-      },
-      {
-        url: '/images/lms.webp',
-        description: 'LMS',
-        details: 'Learning Management System.',
-      },
-      {
-        url: '/images/tagihan-digital.webp',
-        description: 'Tagihan Digital',
-        details: 'Digital billing for your convenience.',
-      },
-      {
-        url: '/images/kartu.webp',
-        description: 'Card Transaction',
-        details: 'Make payments seamlessly.',
-      },
-      /* {
-        url: 'https://images.unsplash.com/photo-1512756290469-ec264b7fbf87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2253&q=80',
-      },
-      {
-        url: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80',
-      }, */
-    ];
-  
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [shouldContinue, setShouldContinue] = useState(true);
-  
-    const prevSlide = () => {
-      const isFirstSlide = currentIndex === 0;
-      const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-      setCurrentIndex(newIndex);
-    };
-  
-    const prevSlideBtnClick = () => {
-      setShouldContinue(false);
-      setTimeout(() => setShouldContinue(true), 10000);
-      const isFirstSlide = currentIndex === 0;
-      const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-      setCurrentIndex(newIndex);
-    };
-  
-    const nextSlide = () => {
-      const isLastSlide = currentIndex === slides.length - 1;
-      const newIndex = isLastSlide ? 0 : currentIndex + 1;
-      setCurrentIndex(newIndex);
-    };
-  
-    const nextSlideBtnClick = () => {
-      setShouldContinue(false);
-      setTimeout(() => setShouldContinue(true), 10000);
-      const isLastSlide = currentIndex === slides.length - 1;
-      const newIndex = isLastSlide ? 0 : currentIndex + 1;
-      setCurrentIndex(newIndex);
-    };
-  
-    const goToSlide = ({ slideIndex }: { slideIndex: number }) => {
-      setCurrentIndex(slideIndex);
-    };
-  
-    //for every second change the slide
-    useEffect(() => {
-      //preload all images first
-      slides.forEach((slide) => {
-        new Image().src = slide.url;
-      });
-  
-      const interval = setInterval(() => {
-        if (shouldContinue) {
-          nextSlide();
-        }
-      }, 5000);
-      return () => clearInterval(interval);
-    }, [currentIndex, shouldContinue]);
-  
-    return (
+  const slides = [
+    {
+      url: '/images/bimbi-ai.webp',
+      description: 'Bimbi AI',
+      details: 'AI Chatbot for Education.',
+    },
+    {
+      url: '/images/lms.webp',
+      description: 'LMS',
+      details: 'Learning Management System.',
+    },
+    {
+      url: '/images/tagihan-digital.webp',
+      description: 'Tagihan Digital',
+      details: 'Digital billing for your convenience.',
+    },
+    {
+      url: '/images/kartu.webp',
+      description: 'Card Transaction',
+      details: 'Make payments seamlessly.',
+    },
+    /* {
+      url: 'https://images.unsplash.com/photo-1512756290469-ec264b7fbf87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2253&q=80',
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80',
+    }, */
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [shouldContinue, setShouldContinue] = useState(true);
+
+  const prevSlide = () => {
+    const isFirstSlide = currentIndex === 0;
+    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const prevSlideBtnClick = () => {
+    setShouldContinue(false);
+    setTimeout(() => setShouldContinue(true), 10000);
+    const isFirstSlide = currentIndex === 0;
+    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const nextSlide = () => {
+    const isLastSlide = currentIndex === slides.length - 1;
+    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const nextSlideBtnClick = () => {
+    setShouldContinue(false);
+    setTimeout(() => setShouldContinue(true), 10000);
+    const isLastSlide = currentIndex === slides.length - 1;
+    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const goToSlide = ({ slideIndex }: { slideIndex: number }) => {
+    setCurrentIndex(slideIndex);
+  };
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000, // Duration of the animation
+      once: true, // Whether animation should happen only once - while scrolling down
+    });
+  }, []);
+
+  //for every second change the slide
+  useEffect(() => {
+    //preload all images first
+    slides.forEach((slide) => {
+      new Image().src = slide.url;
+    });
+
+    const interval = setInterval(() => {
+      if (shouldContinue) {
+        nextSlide();
+      }
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [currentIndex, shouldContinue]);
+
+  return (
+    <div className="h-[150vh] sm:h-screen bg-grey">
+      <div className="flex items-center justify-center h-auto w-full font-bold text-6xl text-black px-10 pb-0" data-aos="fade-up">
+        Solusi inovatif lebih mudah.
+      </div>
       <div className='h-[40%] sm:h-3/4 w-auto m-auto py-0 px-4 relative group pt-8 bg-grey'>
         <div
           style={{
@@ -122,7 +135,8 @@ const Carousel = () => {
           ))}
         </div> */}
       </div>
-    );
-  }
+    </div>
+  );
+}
 
 export default Carousel
