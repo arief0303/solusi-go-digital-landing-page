@@ -6,7 +6,6 @@ const MobileApp = () => {
     useEffect(() => {
       AOS.init({
         duration: 2000, // Duration of the animation
-        once: true, // Whether animation should happen only once - while scrolling down
       });
     }, []);
   
@@ -25,7 +24,7 @@ const MobileApp = () => {
           className="max-w-screen sm:max-w-[50vw] rounded-lg py-5 h-fit"
           src="/images/app-preview.webp"
           alt="Preview Desktop App"
-          data-aos="slide-up">
+          data-aos="fade-up">
         </img>
       </div>
     );
